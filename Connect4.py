@@ -29,7 +29,7 @@ def get_winner(buttons):
         
         for row in range(3):
             for column in range(3):
-                buttons[row][column].config(bg="orange")   
+                buttons[row][column].config(bg="yellow")   
         return "Tie"
     
     else:

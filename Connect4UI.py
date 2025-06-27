@@ -5,7 +5,7 @@ def new_game(buttons, label, players):
 
     player = random.choice(players)
 
-    label.config(text=player+" turn")
+    label.config(text=player+" turn!")
 
     for row in range(3):
         for column in range(3):
