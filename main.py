@@ -5,7 +5,7 @@ import random
 import row
 
 
-def next_turn(row, column):
+def next_turn(row, column): 
     global player 
 
     if buttons[row][column]['text'] == "" and get_winner(buttons) is False:
@@ -27,7 +27,7 @@ def next_turn(row, column):
             elif get_winner(buttons) is True:
                 label.config(text=players[1] + " Wins!")
             elif get_winner(buttons) == "Tie":
-                label.config(text="Tie!")      
+                label.config(text="Tie")      
 
 
 window = Tk()
