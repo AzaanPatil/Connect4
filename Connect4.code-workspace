@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Connect4",
+			"path": "Connect4"
+		}
+	],
+	"settings": {}
+}

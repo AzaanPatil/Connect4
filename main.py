@@ -27,17 +27,27 @@ def next_turn(row, column):
             elif get_winner(buttons) is True:
                 label.config(text=players[1] + " Wins")
             elif get_winner(buttons) == "Tie":
-                label.config(text="Tie")      
-
+                label.config(text="Tie!")
 
 window = Tk()
-window.title("Tic-Tac-Toe")
-players = ["X", "O"]
+window.title("Connect4")
+window.geometry("600x600")
+window.configure(bg="#2e2e2e")
+players = ["Red", "Yellow"]
 player = random.choice(players)
-buttons = [[0,0,0],
-           [0,0,0],
-           [0,0,0]]
+buttons = [[0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0],
+           [0,0,0,0,0,0,0]]
 
+
+new_game = lambda buttons, label, players: new_game(buttons, label, players)
+# Create a new game with the buttons and label
+new_game(buttons, label, players)
+
+# Create a label to display the current player's turn
 label = Label(text= player + " turn", font=('consolas', 40))
 label.pack(side="top")
 
@@ -51,6 +61,7 @@ reset.pack(side="top")
 frame = Frame(window, bg="#2e2e2e")
 frame.pack()
 
+#adapted for Connect4 style game
 for row in range(3):
     for column in range(3):
         buttons[row][column] = Button(frame, text="", font=('consolas', 40), width=5, height=2,
